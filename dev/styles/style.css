@@ -1,0 +1,246 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Century Gothic'), url(../fonts/GOTHIC.woff) format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Century Gothic Bold'), url(../fonts/GOTHICB.woff) format('woff');
+}
+body {
+  background: #000;
+  font: 400 16px / 1.2 'Century Gothic', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+.l-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row .col-l {
+  float: left;
+}
+.row .col-r {
+  float: right;
+}
+header.page {
+  background: #2d2d2d;
+}
+header.page .topline {
+  vertical-align: middle;
+  background: #ffcc00;
+  font: 400 12px / 1 'Century Gothic', sans-serif;
+  color: #fff;
+}
+header.page .topline .l-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+header.page .topline .phone,
+header.page .topline .mail {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 25px;
+}
+header.page .topline .phone {
+  margin-right: 35px;
+}
+header.page .topline .phone i {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 9px;
+  height: 12px;
+  background: url(../img/icon-phone-white.jpg) 50% 50% no-repeat;
+}
+header.page .topline .mail i {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 17px;
+  height: 12px;
+  background: url(../img/icon-mail-white.jpg) 50% 50% no-repeat;
+}
+header.page .topline .mail a {
+  color: #fff;
+}
+header.page .mainline {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 80px;
+  background: #fff;
+}
+header.page .mainline .logo {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  width: 184px;
+  height: 50px;
+  background: url(../img/logo-header.jpg) 50% 50% no-repeat;
+}
+header.page .mainline nav {
+  float: right;
+}
+header.page .mainline nav ul li {
+  display: inline-block;
+  margin-top: 42px;
+  margin-left: 25px;
+}
+header.page .mainline nav ul li a {
+  font: 400 16px / 1 'Century Gothic', sans-serif;
+  color: #666;
+}
+header.page .page-title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 95px;
+  padding-top: 20px;
+  font: 400 30px / 1 'Century Gothic', sans-serif;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+main .bg-wrapper {
+  background: url(../img/about_bg-content.png) 0% 0% no-repeat, #dcdcdc;
+}
+main .bg-wrapper .content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  padding-bottom: 20px;
+  position: relative;
+  top: -20px;
+  background: rgba(255, 204, 0, 0.5);
+}
+main .bg-wrapper .content .col-l {
+  width: 388px;
+  height: 550px;
+  padding-left: 20px;
+}
+main .bg-wrapper .content .col-l img {
+  width: 368px;
+  height: 550px;
+}
+main .bg-wrapper .content .col-r {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  padding-top: 20px;
+  width: 572px;
+  height: 550px;
+}
+main .bg-wrapper .content .col-r p {
+  margin-bottom: 20px;
+}
+main .bg-wrapper .content .col-r .mission {
+  position: absolute;
+  bottom: 0;
+}
+main .bg-wrapper .content .col-r .mission .title {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  left: -20px;
+  width: calc(100% + 20px);
+  height: 34px;
+  line-height: 34px;
+  background: #26282c;
+  color: #fff;
+}
+main .bg-wrapper .content .col-r .mission .descr {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  left: -20px;
+  width: calc(100% + 20px);
+  background: #fff;
+}
+footer {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  background: #2d2d2d;
+  color: #fff;
+}
+footer .col-l {
+  width: 586px;
+}
+footer .col-l img {
+  width: 586px;
+  height: 278px;
+}
+footer .col-r {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 374px;
+  padding-top: 20px;
+}
+footer .col-r .title {
+  font-size: 18px;
+  line-height: 1;
+}
+footer .col-r p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+footer .col-r p a {
+  color: #fff;
+}
+footer .col-r p .yellow {
+  color: #ffcc00;
+}
+footer .col-r p i.mail {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 15px;
+  height: 11px;
+  margin-right: 2px;
+  background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+}

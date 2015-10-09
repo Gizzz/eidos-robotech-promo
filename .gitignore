@@ -1,3 +1,15 @@
+# =========================
+# Mine
+# =========================
+
+node_modules/
+bower_components/
+.tmp/
+
+# =========================
+# Defaults
+# =========================
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

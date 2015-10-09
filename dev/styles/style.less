@@ -1,0 +1,341 @@
+// =====================
+// vars
+// =====================
+
+@color-yellow: #ffcc00;
+@color-dark-blue: #2d2d2d;
+
+@font-family-main: 'Century Gothic', sans-serif;
+
+// =====================
+// resets, overridings
+// =====================
+
+*,
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// =====================
+// font imports
+// =====================
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Century Gothic'), url(../fonts/GOTHIC.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Century Gothic Bold'), url(../fonts/GOTHICB.woff) format('woff');
+}
+
+// =====================
+// mixins
+// =====================
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.make-center(@element-width: 960px) {
+	margin-left: auto;
+	margin-right: auto;
+	width: @element-width;
+}
+
+.make-padding-left-right(@padding-size: 20px) {
+	padding-left: @padding-size;
+	padding-right: @padding-size;	
+}
+
+// =====================
+// common
+// =====================
+
+body {
+	background: #000;
+	font: 400 16px / 1.2 @font-family-main;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	.make-center(1200px);
+}
+
+.l-wrapper {
+	.make-center();
+}
+
+.row {
+	.clearfix();
+
+	.col-l {
+		float: left;
+	}
+
+	.col-r {
+		float: right;
+	}
+}
+
+// =====================
+// block specific
+// =====================
+
+header.page {
+	background: @color-dark-blue;
+
+	.topline {
+		.l-wrapper {
+			.make-padding-left-right();
+		}
+
+		vertical-align: middle;
+		background: @color-yellow;
+		font: 400 12px / 1 @font-family-main;
+		color: #fff;
+
+		.phone,
+		.mail {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 25px;
+		}
+
+		.phone {
+			margin-right: 35px;
+
+			i {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				width: 9px;
+				height: 12px;
+				background: url(../img/icon-phone-white.jpg) 50% 50% no-repeat;
+			}
+		}
+
+		.mail {
+			i {
+				position: relative;
+				top: 2px;
+				display: inline-block;
+				width: 17px;
+				height: 12px;
+				background: url(../img/icon-mail-white.jpg) 50% 50% no-repeat;
+			}
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	.mainline {
+		.make-center();
+		.make-padding-left-right();
+
+		height: 80px;
+		background: #fff;
+
+		.logo {
+			position: relative;
+			top: 15px;
+			display: inline-block;
+			width: 184px;
+			height: 50px;
+			background: url(../img/logo-header.jpg) 50% 50% no-repeat;
+		}
+
+		nav {
+			float: right;
+
+			ul {
+				li {
+					display: inline-block;
+					margin-top: 42px;
+					margin-left: 25px;
+
+					a {
+						font: 400 16px / 1 @font-family-main;
+						color: #666;
+					}
+				}
+			}
+		}
+	}
+
+	.page-title {
+		.make-center();
+		.make-padding-left-right();
+
+		height: 95px;
+		padding-top: 20px;
+		font: 400 30px / 1 @font-family-main;
+		color: @color-yellow;
+		text-transform: uppercase;
+	}
+}
+
+main {
+	.bg-wrapper {
+		background: 
+			url(../img/about_bg-content.png) 0% 0% no-repeat,
+			#dcdcdc;
+
+		.content {
+			.make-center();
+
+			padding-bottom: 20px;
+
+			.col-l {
+				width: 388px;
+				height: 550px;
+				padding-left: 20px;
+
+				img {
+					width: 368px;
+					height: 550px;
+				}
+			}
+
+			.col-r {
+				.make-padding-left-right();
+
+				position: relative;
+				padding-top: 20px;
+				width: 572px;
+				height: 550px;
+
+				p {
+					margin-bottom: 20px;
+				}
+
+				.mission {
+					position: absolute;
+					bottom: 0;
+
+					.title {
+						.make-padding-left-right();
+
+						position: relative;
+						left: -20px;
+						width: ~"calc(100% + 20px)";
+						height: 34px;
+						line-height: 34px;
+						background: #26282c;
+						color: #fff;
+					}
+
+					.descr {
+						.make-padding-left-right();
+
+						padding-top: 20px;
+						padding-bottom: 20px;
+
+						position: relative;
+						left: -20px;
+						width: ~"calc(100% + 20px)";
+						background: #fff;
+					}
+				}
+			}
+
+			position: relative;
+			top: -20px;
+			background: rgba(255, 204, 0, 0.5);
+		}
+	}
+}
+
+footer {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	background: @color-dark-blue;
+	color: #fff;
+
+	.col-l {
+		width: 586px;
+
+		img {
+			width: 586px;
+			height: 278px;
+		}
+	}
+
+	.col-r {
+		.make-padding-left-right();
+
+		width: 374px;
+		padding-top: 20px;
+
+		.title {
+			font-size: 18px;
+			line-height: 1;			
+		}
+
+		p {
+			margin-top: 20px;
+			font-size: 14px;
+
+			a {
+				color: #fff;
+			}
+
+			.yellow {
+				color: @color-yellow;
+			}
+
+			i.mail {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				width: 15px;
+				height: 11px;
+				margin-right: 2px;
+				background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+			}
+		}
+	}
+}
