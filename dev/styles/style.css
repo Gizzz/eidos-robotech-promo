@@ -145,6 +145,45 @@ header.page .page-title {
   color: #ffcc00;
   text-transform: uppercase;
 }
+footer {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  background: #2d2d2d;
+  color: #fff;
+}
+footer .col-l .map {
+  width: 586px;
+  height: 278px;
+}
+footer .col-r {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 374px;
+  padding-top: 20px;
+}
+footer .col-r .title {
+  font-size: 18px;
+  line-height: 1;
+}
+footer .col-r p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+footer .col-r p a {
+  color: #fff;
+}
+footer .col-r p .yellow {
+  color: #ffcc00;
+}
+footer .col-r p i.mail {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 15px;
+  height: 11px;
+  margin-right: 2px;
+  background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+}
 main .bg-wrapper {
   background: url(../img/about_bg-content.png) 0% 0% no-repeat, #dcdcdc;
 }
@@ -155,7 +194,7 @@ main .bg-wrapper .content {
   padding-bottom: 20px;
   position: relative;
   top: -20px;
-  background: rgba(255, 204, 0, 0.5);
+  background: linear-gradient(rgba(255, 204, 0, 0.99), rgba(255, 204, 0, 0.3));
 }
 main .bg-wrapper .content .col-l {
   width: 388px;
@@ -202,45 +241,108 @@ main .bg-wrapper .content .col-r .mission .descr {
   width: calc(100% + 20px);
   background: #fff;
 }
-footer {
-  margin-top: 20px;
-  padding-bottom: 20px;
+body.services main .bg-wrapper {
+  background: url(../img/services_bg-content.png) 0% 0% no-repeat, #dcdcdc;
+}
+body.services main .bg-wrapper .content .col-l {
+  width: 395px;
+  height: 566px;
+  padding-left: 20px;
+}
+body.services main .bg-wrapper .content .col-l img {
+  position: relative;
+  top: 20px;
+  width: 375px;
+  height: 566px;
+}
+body.services main .bg-wrapper .content .col-r {
+  width: 565px;
+}
+body.services main .bg-wrapper .content .col-r .mission {
+  bottom: none;
+  top: 20px;
+}
+body.services main .bg-wrapper .content .col-r .mission .title {
   background: #2d2d2d;
-  color: #fff;
 }
-footer .col-l {
-  width: 586px;
+body.services main .bg-wrapper .content .col-r ul {
+  position: relative;
+  top: 165px;
 }
-footer .col-l img {
-  width: 586px;
-  height: 278px;
+body.services main .bg-wrapper .content .col-r ul li {
+  position: relative;
+  margin-bottom: 23px;
+  padding-left: 20px;
+  font-size: 18px;
 }
-footer .col-r {
+body.services main .bg-wrapper .content .col-r ul li:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+}
+body.production main .bg-wrapper {
+  background: url(../img/production_bg-content.png) 0% 0% no-repeat, #dcdcdc;
+}
+body.production main .bg-wrapper .content {
   padding-left: 20px;
   padding-right: 20px;
-  width: 374px;
-  padding-top: 20px;
 }
-footer .col-r .title {
-  font-size: 18px;
-  line-height: 1;
-}
-footer .col-r p {
-  margin-top: 20px;
+body.production main .bg-wrapper .content .col {
+  float: left;
+  width: 290px;
+  height: 707px;
   font-size: 14px;
+  line-height: 1.1;
+  background: #fff;
 }
-footer .col-r p a {
-  color: #fff;
+body.production main .bg-wrapper .content .col:not(:last-child) {
+  margin-right: 25px;
 }
-footer .col-r p .yellow {
-  color: #ffcc00;
+body.production main .bg-wrapper .content .col:nth-child(1) .img {
+  background: url(../img/production_content-img-1.jpg) 50% 50% no-repeat;
 }
-footer .col-r p i.mail {
+body.production main .bg-wrapper .content .col:nth-child(2) .img {
+  background: url(../img/production_content-img-2.jpg) 50% 50% no-repeat;
+}
+body.production main .bg-wrapper .content .col:nth-child(3) .img {
+  background: url(../img/production_content-img-3.jpg) 50% 50% no-repeat;
+}
+body.production main .bg-wrapper .content .col .img {
+  width: 290px;
+  height: 270px;
+}
+body.production main .bg-wrapper .content .col .title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+body.production main .bg-wrapper .content .col p {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+body.production main .bg-wrapper .content .col ul {
   position: relative;
-  top: 1px;
+}
+body.production main .bg-wrapper .content .col ul li {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+body.production main .bg-wrapper .content .col ul li:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
   display: inline-block;
-  width: 15px;
-  height: 11px;
-  margin-right: 2px;
-  background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+  width: 6px;
+  height: 6px;
+  background: #ffcc00;
 }

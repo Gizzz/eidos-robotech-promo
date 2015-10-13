@@ -119,10 +119,6 @@ a {
 	}
 }
 
-// =====================
-// block specific
-// =====================
-
 header.page {
 	background: @color-dark-blue;
 
@@ -218,6 +214,59 @@ header.page {
 	}
 }
 
+footer {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	background: @color-dark-blue;
+	color: #fff;
+
+	.col-l {
+		.map {
+			width: 586px;
+			height: 278px;
+		}
+	}
+
+	.col-r {
+		.make-padding-left-right();
+
+		width: 374px;
+		padding-top: 20px;
+
+		.title {
+			font-size: 18px;
+			line-height: 1;			
+		}
+
+		p {
+			margin-top: 20px;
+			font-size: 14px;
+
+			a {
+				color: #fff;
+			}
+
+			.yellow {
+				color: @color-yellow;
+			}
+
+			i.mail {
+				position: relative;
+				top: 1px;
+				display: inline-block;
+				width: 15px;
+				height: 11px;
+				margin-right: 2px;
+				background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+			}
+		}
+	}
+}
+
+// =====================
+// page specific
+// =====================
+
 main {
 	.bg-wrapper {
 		background: 
@@ -228,6 +277,11 @@ main {
 			.make-center();
 
 			padding-bottom: 20px;
+			position: relative;
+			top: -20px;
+			// background: rgba(255, 204, 0, 0.5);
+			background: 
+			    linear-gradient(rgba(255, 204, 0, 0.99), rgba(255, 204, 0, 0.3));
 
 			.col-l {
 				width: 388px;
@@ -281,60 +335,145 @@ main {
 					}
 				}
 			}
-
-			position: relative;
-			top: -20px;
-			background: rgba(255, 204, 0, 0.5);
 		}
 	}
 }
 
-footer {
-	margin-top: 20px;
-	padding-bottom: 20px;
-	background: @color-dark-blue;
-	color: #fff;
+body.services {
+	main {
+		.bg-wrapper {
+			background: 
+				url(../img/services_bg-content.png) 0% 0% no-repeat,
+				#dcdcdc;
 
-	.col-l {
-		width: 586px;
+			.content {
+				.col-l {
+					width: 395px;
+					height: 566px;
+					padding-left: 20px;
 
-		img {
-			width: 586px;
-			height: 278px;
+					img {
+						position: relative;
+						top: 20px;
+						width: 375px;
+						height: 566px;
+					}
+				}
+
+				.col-r {
+					width: 565px;
+
+					.mission {
+						bottom: none;
+						top: 20px;
+
+						.title {
+							background: #2d2d2d;
+						}						
+					}
+
+					ul {
+						position: relative;
+						top: 165px;
+
+						li {
+							position: relative;
+							margin-bottom: 23px;
+							padding-left: 20px;
+							font-size: 18px;
+
+							&:before {
+								content: "";
+								position: absolute;
+								top: 8px;
+								left: 5px;
+								display: inline-block;
+								width: 6px;
+								height: 6px;
+								background: #fff;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
+}
 
-	.col-r {
-		.make-padding-left-right();
+body.production {
+	main {
+		.bg-wrapper {
+			background: 
+				url(../img/production_bg-content.png) 0% 0% no-repeat,
+				#dcdcdc;
 
-		width: 374px;
-		padding-top: 20px;
+			.content {
+				.make-padding-left-right();
 
-		.title {
-			font-size: 18px;
-			line-height: 1;			
-		}
+				.col {
+					float: left;
+					width: 290px;
+					height: 707px;
+					font-size: 14px;
+					line-height: 1.1;
+					background: #fff;
 
-		p {
-			margin-top: 20px;
-			font-size: 14px;
+					&:not(:last-child) {
+						margin-right: 25px;
+					}
 
-			a {
-				color: #fff;
-			}
+					&:nth-child(1) .img {
+						background: url(../img/production_content-img-1.jpg) 50% 50% no-repeat;
+					}
 
-			.yellow {
-				color: @color-yellow;
-			}
+					&:nth-child(2) .img {
+						background: url(../img/production_content-img-2.jpg) 50% 50% no-repeat;
+					}
 
-			i.mail {
-				position: relative;
-				top: 1px;
-				display: inline-block;
-				width: 15px;
-				height: 11px;
-				margin-right: 2px;
-				background: url(../img/icon-mail-yellow.png) 50% 50% no-repeat;
+					&:nth-child(3) .img {
+						background: url(../img/production_content-img-3.jpg) 50% 50% no-repeat;
+					}
+
+					.img {
+						width: 290px;
+						height: 270px;
+					}
+
+					.title {
+						margin-top: 10px;
+						margin-bottom: 10px;
+						font-size: 18px;
+						font-weight: bold;
+						text-align: center;
+					}
+
+					p {
+						.make-padding-left-right(10px);
+
+						margin-top: 10px;
+					}
+
+					ul {
+						position: relative;
+
+						li {
+							position: relative;
+							margin-top: 10px;
+							padding-left: 20px;
+
+							&:before {
+								content: "";
+								position: absolute;
+								top: 8px;
+								left: 5px;
+								display: inline-block;
+								width: 6px;
+								height: 6px;
+								background: @color-yellow;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
