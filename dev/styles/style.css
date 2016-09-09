@@ -349,3 +349,55 @@ body.production main .bg-wrapper .content .col ul li:before {
   height: 6px;
   background: #ffcc00;
 }
+body.partners main .bg-wrapper .content {
+  padding-top: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+  min-height: 590px;
+  background: rgba(255, 255, 255, 0.86);
+}
+body.partners main .bg-wrapper .content .partners-list .row:before,
+body.partners main .bg-wrapper .content .partners-list .row:after {
+  content: " ";
+  display: table;
+}
+body.partners main .bg-wrapper .content .partners-list .row:after {
+  clear: both;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item {
+  float: left;
+  width: 200px;
+  height: 164px;
+  background: url(../img/partners_robo-center.png) no-repeat 50% 50%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: .8;
+  transition: all .25s;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item:not(:first-child) {
+  margin-left: 32px;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.min-eco-rt {
+  background: url(../img/partners_min-eco-rt.png) no-repeat 50% 50%;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.robo-center {
+  background: url(../img/partners_robo-center.png) no-repeat 50% 50%;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.kuka {
+  background: url(../img/partners_kuka.png) no-repeat 50% 50%;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.kai {
+  background: url(../img/partners_kai.png) no-repeat 50% 50%;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.innokam {
+  background: url(../img/partners_innokam.png) no-repeat 50% 50%;
+  background-size: 200px 58px;
+}
+body.partners main .bg-wrapper .content .partners-list .row .item.smarthead {
+  background: url(../img/partners_smarthead.png) no-repeat 50% 50%;
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<title>Эйдос Робототехника - о нас</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200">
+	<!-- <link rel="icon" href="favicon.ico" /> -->
+
+	<!-- build:css styles/bundle.css -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/html5-boilerplate-main.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<!-- endbuild -->
+</head>
+
+<body class="partners">
+<!--[if lt IE 10]>
+<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a
+	href="http://browsehappy.com/">обновите ваш браузер</a> для корректного отображения сайта.</p>
+<![endif]-->
+
+<div class="container">
+	<header class="page">
+		<div class="topline">
+			<div class="l-wrapper">
+				<div class="phone">
+					<i></i> 8(843)227-40-62
+				</div>
+				<div class="mail">
+					<i></i>
+					<a href="mailto:mail@oooeidos.ru">mail@oooeidos.ru</a>
+				</div>
+			</div>
+		</div>
+		<div class="mainline">
+			<a class="logo" href="index.html"></a>
+			<nav>
+				<ul>
+					<li><a href="index.html">о нас</a></li>
+					<li><a href="production.html">продукция</a></li>
+					<li><a href="services.html">услуги</a></li>
+					<li><a class="active" href="partners.html">партнеры</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="page-title">
+			П А Р Т Н Е РЫ
+		</div>
+	</header>
+	<main>
+		<div class="bg-wrapper">
+			<div class="content">
+				<div class="partners-list">
+					<div class="row">
+						<a href="http://mert.tatarstan.ru/" class="item min-eco-rt"></a>
+						<a href="http://robotrt.com/" class="item robo-center"></a>
+						<a href="http://www.kuka.com/" class="item kuka"></a>
+						<a href="http://www.kai.ru/" class="item kai"></a>
+					</div>
+					<div class="row">
+						<a href="http://www.innokam.ru/" class="item innokam"></a>
+						<a href="http://smarthead.ru/" class="item smarthead"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page">
+		<div class="l-wrapper">
+			<div class="row">
+				<div class="col-l">
+					<div class="map" id="map-canvas">
+					</div>
+				</div>
+				<div class="col-r">
+					<div class="title">
+						Контактные данные
+					</div>
+					<p>
+            <span class="yellow">
+              юридический адрес организации:
+            </span>
+						<br> 420107, Республика Татарстан,
+						<br> г. Казань, ул. Петербургская, д.50,
+						<br> оф. 43
+					</p>
+					<p>
+            <span class="yellow">
+              почтовый адрес организации:
+            </span>
+						<br> 420107, Республика Татарстан,
+						<br> г.Казань, ул. Петербургская, д.50,
+						<br> оф. 43
+					</p>
+					<p>
+            <span class="yellow">
+              тел/факс:
+            </span> 8(843)227-40-62
+						<br>
+						<i class="mail"></i>
+						<a href="mailto:mail@oooeidos.ru">mail@oooeidos.ru</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<!-- build:ignore -->
+
+<!-- map scripts -->
+<script>
+	function initMap() {
+		var myLatLng = {lat: 55.781170, lng: 49.130973};
+
+		var mapOptions = {
+			center: myLatLng,
+			zoom: 16,
+			scrollwheel: false,
+			// draggable: false,
+			// disableDoubleClickZoom: true,
+			// disableDefaultUI: true,
+		};
+
+		var map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			// title: 'tst'
+		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD54gx71VNb9c_h5eM21iI94SEVD-rig_E&callback=initMap">
+</script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/bundle.js -->
+<!--
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="js/app.js"></script>
+-->
+<!-- endbuild -->
+</body>
+
+</html>

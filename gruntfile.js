@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 		watch: {
 			less: {
 				files: ['dev/styles/*.less'],
-				tasks: ['less']
+				tasks: ['less', 'autoprefixer:dev']
 			},
 		},
 		browserSync: {
@@ -81,11 +81,18 @@ module.exports = function (grunt) {
 		autoprefixer: {
 			dev: {
 				options: {
-					browsers: ['last 4 versions'],
+					browsers: ['last 2 versions'],
+				},
+				src: 'dev/styles/style.css',
+				dest: 'dev/styles/style.css',
+			},
+			prod: {
+				options: {
+					browsers: ['last 2 versions'],
 				},
 				src: 'prod/styles/bundle.css',
 				dest: 'prod/styles/bundle.css',
-			}
+			},
 		},
 		useminPrepare: {
 			html: 'dev/index.html',
@@ -364,6 +371,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('dev', [
 		'less',
+		'autoprefixer:dev',
 		'watch',
 	]);
 
@@ -399,7 +407,7 @@ module.exports = function (grunt) {
 		'copy:extra',
 
 		'usemin-task',
-		'autoprefixer',
+		'autoprefixer:prod',
 
 		'resp-img-task',
 		'imagemin',
